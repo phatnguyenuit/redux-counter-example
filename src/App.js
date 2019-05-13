@@ -1,8 +1,14 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
 
-function App() {
+import CounterList from "./components/CounterList";
+import { Provider } from "react-redux";
+import React from "react";
+import createStore from "./redux/createStore";
+import logo from "./logo.svg";
+
+const store = createStore();
+
+const App = () => {
   return (
     <div className="App">
       <header className="App-header">
@@ -19,8 +25,14 @@ function App() {
           Learn React
         </a>
       </header>
+      <CounterList />
     </div>
   );
-}
+};
 
-export default App;
+const WrappedApp = () => (
+  <Provider store={store}>
+    <App />
+  </Provider>
+);
+export default WrappedApp;

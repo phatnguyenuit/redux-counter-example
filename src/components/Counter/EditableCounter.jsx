@@ -1,6 +1,6 @@
 import React from "react";
 
-const Counter = props => {
+const EdiatbleCounter = props => {
   const { id, text, value, onDecrease, onIncrease, onReset } = props;
   return (
     <div>
@@ -19,4 +19,4 @@ const Counter = props => {
   );
 };
 
-export default Counter;
+export default EdiatbleCounter;
