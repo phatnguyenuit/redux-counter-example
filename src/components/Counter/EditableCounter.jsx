@@ -1,22 +1,53 @@
-import React from "react";
+import React from 'react';
 
-const EdiatbleCounter = props => {
-  const { id, text, value, onDecrease, onIncrease, onReset } = props;
-  return (
-    <div>
-      <h1>{text}</h1>
+class EdiatbleCounter extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      text: '',
+      value: 0
+    };
+  }
+  handleAddCounter = e => {
+    const { onAddCounter } = this.props;
+    onAddCounter({ text, value });
+  };
+
+  handleInputChange = e => {
+    const { name, value } = e.target;
+    this.setState({
+      [name]: value
+    });
+  };
+
+  render() {
+    const { text, value } = this.state;
+    return (
       <div>
-        <button onClick={onDecrease(id)}>-</button>
         <div>
-          <span>{value}</span>
+          <label htmlFor='counterText'>Title</label>
+          <input
+            name='text'
+            id='counterText'
+            value={text}
+            onChange={this.handleInputChange}
+          />
         </div>
-        <button onClick={onIncrease(id)}>+</button>
+        <div>
+          <label htmlFor='counterValue'>Value</label>
+          <input
+            name='value'
+            id='counterValue'
+            value={value}
+            onChange={this.handleInputChange}
+          />
+        </div>
+        <div>
+          <button onClick={this.handleAddCounter}>ADD</button>
+        </div>
       </div>
-      <div>
-        <button onClick={onReset(id)}>Reset</button>
-      </div>
-    </div>
-  );
-};
+    );
+  }
+}
 
 export default EdiatbleCounter;
