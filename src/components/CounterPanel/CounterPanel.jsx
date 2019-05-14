@@ -1,7 +1,6 @@
-import Counter from '../Counter';
-import CounterList from '../CounterList/CounterList';
-import EdiatbleCounter from '../Counter/EditableCounter';
-import React from 'react';
+import CounterList from "../CounterList";
+import EditableCounter from "../Counter/EditableCounter";
+import React from "react";
 
 class CounterPanel extends React.Component {
   constructor(props) {
@@ -16,14 +15,19 @@ class CounterPanel extends React.Component {
     });
   };
   handleAddCounter = counterValues => {
-    // TODO Implement tonight!
+    const { onAddCounter } = this.props;
+    this.setState({
+      isAdding: false
+    });
+    onAddCounter(counterValues);
   };
   render() {
     const { isAdding } = this.state;
+
     return (
-      <div className='counterPanel'>
+      <div className="counterPanel">
         {!isAdding && <button onClick={this.addNewCounter}>Add new</button>}
-        {isAdding && <EdiatbleCounter onAddCounter={this.handleAddCounter} />}
+        {isAdding && <EditableCounter onAddCounter={this.handleAddCounter} />}
         <CounterList />
       </div>
     );

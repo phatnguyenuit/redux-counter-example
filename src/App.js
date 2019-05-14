@@ -1,6 +1,6 @@
 import "./App.css";
 
-import CounterList from "./components/CounterList";
+import CounterPanel from "./components/CounterPanel";
 import { Provider } from "react-redux";
 import React from "react";
 import createStore from "./redux/createStore";
@@ -25,7 +25,7 @@ const App = () => {
           Learn React
         </a>
       </header>
-      <CounterList />
+      <CounterPanel />
     </div>
   );
 };

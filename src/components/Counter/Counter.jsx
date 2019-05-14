@@ -6,14 +6,14 @@ const Counter = props => {
     <div>
       <h1>{text}</h1>
       <div>
-        <button onClick={onDecrease(id)}>-</button>
+        <button onClick={() => onDecrease(id)}>-</button>
         <div>
           <span>{value}</span>
         </div>
-        <button onClick={onIncrease(id)}>+</button>
+        <button onClick={() => onIncrease(id)}>+</button>
       </div>
       <div>
-        <button onClick={onReset(id)}>Reset</button>
+        <button onClick={() => onReset(id)}>Reset</button>
       </div>
     </div>
   );

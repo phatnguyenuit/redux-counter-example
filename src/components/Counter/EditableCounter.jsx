@@ -1,16 +1,18 @@
-import React from 'react';
+import React from "react";
 
-class EdiatbleCounter extends React.Component {
+class EditableCounter extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      text: '',
+      text: "",
       value: 0
     };
   }
-  handleAddCounter = e => {
+  handleAddCounter = () => {
+    const { text, value } = this.state;
     const { onAddCounter } = this.props;
-    onAddCounter({ text, value });
+    if (!text) return;
+    onAddCounter({ text, value: parseInt(value) });
   };
 
   handleInputChange = e => {
@@ -25,19 +27,20 @@ class EdiatbleCounter extends React.Component {
     return (
       <div>
         <div>
-          <label htmlFor='counterText'>Title</label>
+          <label htmlFor="counterText">Title</label>
           <input
-            name='text'
-            id='counterText'
+            name="text"
+            id="counterText"
             value={text}
             onChange={this.handleInputChange}
           />
         </div>
         <div>
-          <label htmlFor='counterValue'>Value</label>
+          <label htmlFor="counterValue">Value</label>
           <input
-            name='value'
-            id='counterValue'
+            name="value"
+            id="counterValue"
+            type="number"
             value={value}
             onChange={this.handleInputChange}
           />
@@ -50,4 +53,4 @@ class EdiatbleCounter extends React.Component {
   }
 }
 
-export default EdiatbleCounter;
+export default EditableCounter;
