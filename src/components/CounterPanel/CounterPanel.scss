@@ -1,0 +1,19 @@
+.counterPanel {
+  margin: .5em auto;
+  font-size: calc(12px + 2vmin);
+
+  &>.button {
+    display: inline-block;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: calc(10px + 2vmin);
+    padding: 0.1em;
+    width: 20vmin;
+    text-align: center;
+  }
+
+  &>.button-add {
+    color: blue;
+    margin: .5em 0;
+  }
+}

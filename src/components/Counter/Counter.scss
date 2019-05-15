@@ -1,0 +1,37 @@
+.counter {
+  margin: 0 auto .5em;
+  width: 30%;
+  font-size: calc(14px + 2vmin);
+  border: 1px solid rgb(10, 20, 100);
+
+  .title {
+    color: cyan;
+  }
+
+  .control {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .button {
+    display: inline-block;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: calc(14px + 2vmin);
+    padding: 0.1em;
+    width: 10vmin;
+    text-align: center;
+  }
+
+  .button-increase,
+  .button-decrease {
+    color: blue;
+  }
+
+  .button-reset {
+    display: block !important;
+    width: 95%;
+    margin: 1em auto;
+    color: chocolate;
+  }
+}

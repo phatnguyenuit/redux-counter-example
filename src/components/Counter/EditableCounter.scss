@@ -1,0 +1,33 @@
+.editableCounter {
+  margin: .5em auto;
+  width: 30%;
+  font-size: calc(12px + 2vmin);
+  border: 1px solid rgb(10, 20, 100);
+
+  .title,
+  .value {
+    display: flex;
+    justify-content: space-around;
+    margin: .5em 0;
+  }
+
+  .counterText,
+  .counterValue {
+    font-size: calc(12px + 2vmin);
+  }
+
+  .button {
+    display: inline-block;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: calc(14px + 2vmin);
+    padding: 0.1em;
+    width: 10vmin;
+    text-align: center;
+  }
+
+  .button-add {
+    color: blue;
+    margin: .5em 0;
+  }
+}

@@ -1,3 +1,5 @@
+import "./EditableCounter.scss";
+
 import React from "react";
 
 class EditableCounter extends React.Component {
@@ -25,28 +27,32 @@ class EditableCounter extends React.Component {
   render() {
     const { text, value } = this.state;
     return (
-      <div>
-        <div>
+      <div className="editableCounter">
+        <div className="title">
           <label htmlFor="counterText">Title</label>
           <input
             name="text"
             id="counterText"
+            className="counterText"
             value={text}
             onChange={this.handleInputChange}
           />
         </div>
-        <div>
+        <div className="value">
           <label htmlFor="counterValue">Value</label>
           <input
             name="value"
             id="counterValue"
+            className="counterValue"
             type="number"
             value={value}
             onChange={this.handleInputChange}
           />
         </div>
         <div>
-          <button onClick={this.handleAddCounter}>ADD</button>
+          <button onClick={this.handleAddCounter} className="button button-add">
+            ADD
+          </button>
         </div>
       </div>
     );
