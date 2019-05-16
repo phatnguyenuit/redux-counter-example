@@ -1,4 +1,4 @@
-import { decrease, increase, reset } from "../../redux/Counter/actions";
+import { decrease, increase, reset, updateCounter } from "../../redux/Counter/actions";
 import {
   makeGetCounterTextSelector,
   makeGetCounterValueSelector
@@ -22,7 +22,8 @@ const mapDispatchToProps = dispatch =>
     {
       onIncrease: increase,
       onDecrease: decrease,
-      onReset: reset
+      onReset: reset,
+      onEdit: updateCounter,
     },
     dispatch
   );

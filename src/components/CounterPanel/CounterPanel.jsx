@@ -1,8 +1,8 @@
-import "./CounterPanel.scss";
+import './CounterPanel.scss';
 
-import CounterList from "../CounterList";
-import EditableCounter from "../Counter/EditableCounter";
-import React from "react";
+import CounterList from '../CounterList';
+import EditableCounter from '../EditableCounter';
+import React from 'react';
 
 class CounterPanel extends React.Component {
   constructor(props) {
@@ -27,9 +27,9 @@ class CounterPanel extends React.Component {
     const { isAdding } = this.state;
 
     return (
-      <div className="counterPanel">
+      <div className='counterPanel'>
         {!isAdding && (
-          <button onClick={this.addNewCounter} className="button button-add">
+          <button onClick={this.addNewCounter} className='button button-add'>
             Add new
           </button>
         )}
