@@ -11,29 +11,36 @@ class CounterPanel extends React.Component {
       isAdding: false
     };
   }
-  addNewCounter = e => {
-    this.setState({
-      isAdding: true
-    });
+  toogleEditableForm = () => {
+    this.setState(prevState => ({ isAdding: !prevState.isAdding }));
   };
   handleAddCounter = counterValues => {
-    const { onAddCounter } = this.props;
+    const { onAdd } = this.props;
     this.setState({
       isAdding: false
     });
-    onAddCounter(counterValues);
+    onAdd(counterValues);
   };
+
   render() {
     const { isAdding } = this.state;
 
     return (
       <div className='counterPanel'>
         {!isAdding && (
-          <button onClick={this.addNewCounter} className='button button-add'>
+          <button
+            onClick={this.toogleEditableForm}
+            className='button button-add'
+          >
             Add new
           </button>
         )}
-        {isAdding && <EditableCounter onAddCounter={this.handleAddCounter} />}
+        {isAdding && (
+          <EditableCounter
+            onAdd={this.handleAddCounter}
+            cancelFallback={this.toogleEditableForm}
+          />
+        )}
         <CounterList />
       </div>
     );

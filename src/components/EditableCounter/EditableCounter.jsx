@@ -1,6 +1,7 @@
 import './EditableCounter.scss';
 
 import React from 'react';
+import classNames from 'classnames';
 
 class EditableCounter extends React.Component {
   constructor(props) {
@@ -11,18 +12,18 @@ class EditableCounter extends React.Component {
       value: value || 0
     };
   }
-  handleSubmit = () => {
+  submit = () => {
     const { text, value } = this.state;
-    const { id, onAddCounter, onEditCounter } = this.props;
+    const { id, onAdd, onEdit } = this.props;
     if (!text) return;
     if (!!id) {
-      onEditCounter(id, { text, value });
+      onEdit(id, { text, value });
     } else {
-      onAddCounter({ text, value: parseInt(value) });
+      onAdd({ text, value: parseInt(value) });
     }
   };
 
-  handleInputChange = e => {
+  changeInput = e => {
     const { name, value } = e.target;
     this.setState({
       [name]: value
@@ -30,7 +31,7 @@ class EditableCounter extends React.Component {
   };
 
   render() {
-    const { id } = this.props;
+    const { id, cancelFallback } = this.props;
     const { text, value } = this.state;
     const isNew = !!id;
     return (
@@ -42,7 +43,7 @@ class EditableCounter extends React.Component {
             id='counterText'
             className='counterText'
             value={text}
-            onChange={this.handleInputChange}
+            onChange={this.changeInput}
           />
         </div>
         <div className='value'>
@@ -53,23 +54,22 @@ class EditableCounter extends React.Component {
             className='counterValue'
             type='number'
             value={value}
-            onChange={this.handleInputChange}
+            onChange={this.changeInput}
           />
         </div>
         <div>
-          {isNew && (
-            <button onClick={this.handleSubmit} className='button button-add'>
-              Add
-            </button>
-          )}
-          {!isNew && (
-            <button
-              onClick={this.handleSubmit}
-              className='button button-update'
-            >
-              Save
-            </button>
-          )}
+          <button
+            onClick={this.submit}
+            className={classNames('button', {
+              'button-add': isNew,
+              'button-update': !isNew
+            })}
+          >
+            {isNew ? 'Add' : 'Save'}
+          </button>
+          <button className='button button-cancel' onClick={cancelFallback}>
+            Cancel
+          </button>
         </div>
       </div>
     );

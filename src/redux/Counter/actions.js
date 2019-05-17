@@ -7,14 +7,14 @@ import {
   UPDATE
 } from './constants';
 
-export const addCounter = counterValues => ({
+export const add = counterValues => ({
   type: ADD_COUNTER,
   payload: {
     counterValues
   }
 });
 
-export const removeCounter = counterID => ({
+export const remove = counterID => ({
   type: REMOVE_COUNTER,
   payload: {
     counterID
@@ -42,7 +42,7 @@ export const reset = counterID => ({
   }
 });
 
-export const updateCounter = (counterID, values) => ({
+export const update = (counterID, values) => ({
   type: UPDATE,
   payload: {
     counterID,

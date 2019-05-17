@@ -1,6 +1,5 @@
 .editableCounter {
   margin: .5em auto;
-  width: 30%;
   font-size: calc(12px + 2vmin);
   border: 1px solid rgb(10, 20, 100);
 
@@ -22,8 +21,9 @@
     text-transform: uppercase;
     font-size: calc(14px + 2vmin);
     padding: 0.1em;
-    width: 10vmin;
+    width: 5em;
     text-align: center;
+    margin: 0 0.1em;
   }
 
   .button-add {
