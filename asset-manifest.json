@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/redux-counter-example/static/css/main.df519b85.chunk.css",
+    "main.js": "/redux-counter-example/static/js/main.f0ae47d2.chunk.js",
+    "main.js.map": "/redux-counter-example/static/js/main.f0ae47d2.chunk.js.map",
+    "runtime~main.js": "/redux-counter-example/static/js/runtime~main.7372a5d8.js",
+    "runtime~main.js.map": "/redux-counter-example/static/js/runtime~main.7372a5d8.js.map",
+    "static/js/2.19474870.chunk.js": "/redux-counter-example/static/js/2.19474870.chunk.js",
+    "static/js/2.19474870.chunk.js.map": "/redux-counter-example/static/js/2.19474870.chunk.js.map",
+    "index.html": "/redux-counter-example/index.html",
+    "precache-manifest.467727d8904dff81c66d60d6f642e772.js": "/redux-counter-example/precache-manifest.467727d8904dff81c66d60d6f642e772.js",
+    "service-worker.js": "/redux-counter-example/service-worker.js",
+    "static/css/main.df519b85.chunk.css.map": "/redux-counter-example/static/css/main.df519b85.chunk.css.map",
+    "static/media/logo.svg": "/redux-counter-example/static/media/logo.5d5d9eef.svg"
+  }
+}
