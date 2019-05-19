@@ -1,14 +1,14 @@
-import './EditableCounter.scss';
+import "./EditableCounter.scss";
 
-import React from 'react';
-import classNames from 'classnames';
+import React from "react";
+import classNames from "classnames";
 
 class EditableCounter extends React.Component {
   constructor(props) {
     super(props);
     const { text, value } = this.props;
     this.state = {
-      text: text || '',
+      text: text || "",
       value: value || 0
     };
   }
@@ -33,26 +33,23 @@ class EditableCounter extends React.Component {
   render() {
     const { id, cancelFallback } = this.props;
     const { text, value } = this.state;
-    const isNew = !!id;
+    const isNew = !!!id;
     return (
-      <div className='editableCounter'>
-        <div className='title'>
-          <label htmlFor='counterText'>Title</label>
+      <div className="counter counter-editable">
+        <div className="form-group">
+          <label>Title</label>
           <input
-            name='text'
-            id='counterText'
-            className='counterText'
+            name="text"
+            id="counterText"
             value={text}
             onChange={this.changeInput}
           />
         </div>
-        <div className='value'>
-          <label htmlFor='counterValue'>Value</label>
+        <div className="form-group">
+          <label>Value</label>
           <input
-            name='value'
-            id='counterValue'
-            className='counterValue'
-            type='number'
+            name="value"
+            type="number"
             value={value}
             onChange={this.changeInput}
           />
@@ -60,14 +57,14 @@ class EditableCounter extends React.Component {
         <div>
           <button
             onClick={this.submit}
-            className={classNames('button', {
-              'button-add': isNew,
-              'button-update': !isNew
+            className={classNames("button", {
+              "button-add": isNew,
+              "button-update": !isNew
             })}
           >
-            {isNew ? 'Add' : 'Save'}
+            {isNew ? "Add" : "Save"}
           </button>
-          <button className='button button-cancel' onClick={cancelFallback}>
+          <button className="button button-cancel" onClick={cancelFallback}>
             Cancel
           </button>
         </div>

@@ -2,18 +2,22 @@
   margin: .5em auto;
   font-size: calc(12px + 2vmin);
 
-  &>.button {
+  .button {
     display: inline-block;
     font-weight: bold;
     text-transform: uppercase;
     font-size: calc(10px + 2vmin);
-    padding: 0.1em;
-    width: 20%;
+    padding: 0.5rem;
+    width: 30%;
     text-align: center;
+    border-radius: 1rem;
+    background-color: yellowgreen;
+    border-color: white;
+    outline: none;
   }
 
-  &>.button-add {
-    color: blue;
+  .button-add {
+    color: white;
     margin: .5em 0;
   }
 }

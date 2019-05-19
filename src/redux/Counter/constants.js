@@ -1,6 +1,6 @@
 export const INCREASE = 'app/COUNTER/INCREASE';
 export const DECREASE = 'app/COUNTER/DECREASE';
-export const RESET = 'app/COUNTER/RESET';
 export const UPDATE = 'app/COUNTER/UPDATE';
-export const ADD_COUNTER = 'app/COUNTER/ADD_COUNTER';
-export const REMOVE_COUNTER = 'app/COUNTER/REMOVE_COUNTER';
+export const ADD = 'app/COUNTER/ADD';
+export const REMOVE = 'app/COUNTER/REMOVE';
+export const COUNTER_PREFIX = 'COUNTER_'

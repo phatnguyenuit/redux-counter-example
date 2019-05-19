@@ -3,36 +3,53 @@
   width: 30%;
   font-size: calc(14px + 2vmin);
   border: 1px solid rgb(10, 20, 100);
+  background-color: bisque;
+  border-radius: 1rem;
 
   .title {
-    color: cyan;
+    color: rgb(178, 34, 113);
+  }
+
+  .button-group {
+    margin: 0.5rem 0.2rem;
+
+    &--right {
+      float: right;
+    }
+
+    &::after {
+      clear: both;
+    }
   }
 
   .control {
     display: flex;
+    flex-flow: row nowrap;
     justify-content: space-around;
+    margin: 0.5rem 0.2rem;
   }
 
   .button {
     display: inline-block;
     font-weight: bold;
-    text-transform: uppercase;
     font-size: calc(14px + 2vmin);
     padding: 0.1em;
     width: 5em;
-    margin: 0 0 0.1em;
     text-align: center;
-  }
+    color: white;
+    border-radius: .5em;
+    outline: none;
+    margin-right: 0.5rem;
 
-  .button-increase,
-  .button-decrease {
-    color: blue;
-  }
+    &-delete,
+    &-decrease {
+      background-color: red;
+    }
 
-  .button-reset {
-    display: block !important;
-    width: 95%;
-    margin: 1em auto;
-    color: chocolate;
+    &-edit,
+    &-increase {
+      background-color: yellowgreen;
+    }
+
   }
 }

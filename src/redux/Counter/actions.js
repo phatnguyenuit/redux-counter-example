@@ -1,21 +1,20 @@
 import {
-  ADD_COUNTER,
+  ADD,
   DECREASE,
   INCREASE,
-  REMOVE_COUNTER,
-  RESET,
+  REMOVE,
   UPDATE
 } from './constants';
 
 export const add = counterValues => ({
-  type: ADD_COUNTER,
+  type: ADD,
   payload: {
     counterValues
   }
 });
 
 export const remove = counterID => ({
-  type: REMOVE_COUNTER,
+  type: REMOVE,
   payload: {
     counterID
   }
@@ -33,12 +32,6 @@ export const decrease = (counterID, value = 1) => ({
   payload: {
     counterID,
     value
-  }
-});
-export const reset = counterID => ({
-  type: RESET,
-  payload: {
-    counterID
   }
 });
 

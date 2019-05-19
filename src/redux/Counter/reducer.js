@@ -1,9 +1,9 @@
 import {
-  ADD_COUNTER,
+  ADD,
+  COUNTER_PREFIX,
   DECREASE,
   INCREASE,
-  REMOVE_COUNTER,
-  RESET
+  REMOVE
 } from './constants';
 
 import uniqueId from 'lodash/uniqueId';
@@ -66,27 +66,11 @@ const reducer = (state = createInitalState(), action) => {
         }
       };
     }
-    case RESET: {
-      const {
-        counterID
-      } = payload;
-      const selectedCounter = counters[counterID];
-      return {
-        ...state,
-        counters: {
-          ...counters,
-          [counterID]: {
-            ...selectedCounter,
-            value: 0
-          }
-        }
-      };
-    }
-    case ADD_COUNTER: {
+    case ADD: {
       const {
         counterValues
       } = payload;
-      const newCounterID = uniqueId('COUNTER_');
+      const newCounterID = uniqueId(COUNTER_PREFIX);
       return {
         ...state,
         counterIDs: [...counterIDs, newCounterID],
@@ -98,13 +82,15 @@ const reducer = (state = createInitalState(), action) => {
         }
       };
     }
-    case REMOVE_COUNTER: {
+    case REMOVE: {
       const {
         counterID
       } = payload;
       const newCounterIDs = counterIDs.filter(id => id !== counterID);
       const newCounters = newCounterIDs.reduce((prevCounters, id) =>
-        Object.assign(prevCounters, counters[id])
+        Object.assign(prevCounters, {
+          [id]: counters[id]
+        }), {}
       );
       return {
         ...state,
