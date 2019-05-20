@@ -4,16 +4,19 @@
 
   .button {
     display: inline-block;
-    font-weight: bold;
-    text-transform: uppercase;
     font-size: calc(10px + 2vmin);
-    padding: 0.1em;
-    width: 20%;
+    padding: 0.5em;
+    width: 30%;
+    border-radius: 1rem;
+    border-color: white;
+    color: white;
+    outline: none;
     text-align: center;
+
+    &-add {
+      background-color: yellowgreen;
+    }
   }
 
-  .button-add {
-    color: blue;
-    margin: .5em 0;
-  }
+
 }

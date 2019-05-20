@@ -14,15 +14,15 @@ const App = () => {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Simple <code>Counter</code> demo and unit tests
         </p>
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href="https://github.com/phatnguyenuit/redux-counter-example"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Checkout source code
         </a>
       </header>
       <CounterPanel />

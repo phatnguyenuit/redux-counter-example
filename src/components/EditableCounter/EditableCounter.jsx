@@ -16,10 +16,14 @@ class EditableCounter extends React.Component {
     const { text, value } = this.state;
     const { id, onAdd, onEdit } = this.props;
     if (!text) return;
+    const counterValues = {
+      text,
+      value: parseInt(value)
+    };
     if (!!id) {
-      onEdit(id, { text, value });
+      onEdit(id, counterValues);
     } else {
-      onAdd({ text, value: parseInt(value) });
+      onAdd(counterValues);
     }
   };
 

@@ -1,3 +1,7 @@
+# redux-counter-example
+
+## This is a simple demo Counter with Redux and Unit Tests
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

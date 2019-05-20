@@ -3,7 +3,8 @@ import {
   COUNTER_PREFIX,
   DECREASE,
   INCREASE,
-  REMOVE
+  REMOVE,
+  UPDATE
 } from './constants';
 
 import uniqueId from 'lodash/uniqueId';
@@ -62,6 +63,23 @@ const reducer = (state = createInitalState(), action) => {
           [counterID]: {
             ...selectedCounter,
             value: selectedCounter.value - value
+          }
+        }
+      };
+    }
+    case UPDATE: {
+      const {
+        counterID,
+        counterValues
+      } = payload;
+      const selectedCounter = counters[counterID];
+      return {
+        ...state,
+        counters: {
+          ...counters,
+          [counterID]: {
+            ...selectedCounter,
+            ...counterValues
           }
         }
       };

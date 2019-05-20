@@ -24,14 +24,17 @@
 
   .control {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
     justify-content: space-around;
     margin: 0.5rem 0.2rem;
+
+    .value {
+      width: 30%;
+    }
   }
 
   .button {
     display: inline-block;
-    font-weight: bold;
     font-size: calc(14px + 2vmin);
     padding: 0.1em;
     width: 5em;
@@ -39,7 +42,7 @@
     color: white;
     border-radius: .5em;
     outline: none;
-    margin-right: 0.5rem;
+    margin: 0 0.5rem 0.5rem;
 
     &-delete,
     &-decrease {

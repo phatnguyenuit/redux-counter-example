@@ -1,28 +1,32 @@
 .counter-editable {
 
   .form-group {
-    margin: 1em;
+    margin: 1rem;
     display: flex;
+    flex-flow: row wrap;
     justify-content: space-between;
 
     input {
       font-size: calc(14px + 2vmin);
+      width: 100%;
+      flex-shrink: 2;
     }
   }
 
   .button {
     display: inline-block;
-    font-weight: bold;
-    text-transform: uppercase;
     font-size: calc(14px + 2vmin);
     padding: 0.1em;
     width: 5em;
     text-align: center;
-    margin: 0 0.1em;
+    margin: 0 0.5rem 0.5rem;
 
     &-add {
-      color: blue;
-      margin: .5em 0;
+      background-color: yellowgreen;
+    }
+
+    &-cancel {
+      background-color: red;
     }
   }
 }

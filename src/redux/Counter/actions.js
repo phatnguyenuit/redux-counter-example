@@ -35,10 +35,10 @@ export const decrease = (counterID, value = 1) => ({
   }
 });
 
-export const update = (counterID, values) => ({
+export const update = (counterID, counterValues) => ({
   type: UPDATE,
   payload: {
     counterID,
-    values
+    counterValues
   }
 });

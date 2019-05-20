@@ -23,9 +23,10 @@ class Counter extends Component {
     const { id, onDelete } = this.props;
     onDelete(id);
   };
-  update = () => values => {
+  update = (id, values) => {
     const { onUpdate } = this.props;
-    onUpdate(values);
+    onUpdate(id, values);
+    this.toggleEditing();
   };
   toggleEditing = () => {
     this.setState(prevState => ({

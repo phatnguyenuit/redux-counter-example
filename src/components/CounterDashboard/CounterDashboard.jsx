@@ -1,8 +1,8 @@
-import './CounterDashboard.scss';
+import "./CounterDashboard.scss";
 
-import CounterList from '../CounterList';
-import EditableCounter from '../EditableCounter';
-import React from 'react';
+import CounterList from "../CounterList";
+import EditableCounter from "../EditableCounter";
+import React from "react";
 
 class CounterDashboard extends React.Component {
   constructor(props) {
@@ -26,11 +26,12 @@ class CounterDashboard extends React.Component {
     const { isAdding } = this.state;
 
     return (
-      <div className='counterPanel'>
+      <div className="counterPanel">
+        <CounterList />
         {!isAdding && (
           <button
             onClick={this.toogleEditableForm}
-            className='button button-add'
+            className="button button-add"
           >
             Add new
           </button>
@@ -41,7 +42,6 @@ class CounterDashboard extends React.Component {
             cancelFallback={this.toogleEditableForm}
           />
         )}
-        <CounterList />
       </div>
     );
   }
