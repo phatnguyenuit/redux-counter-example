@@ -1,4 +1,4 @@
-import CounterPanel from "./CounterPanel";
+import CounterDashboard from "./CounterDashboard";
 import { add } from "../../redux/Counter/actions";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
@@ -16,4 +16,4 @@ const mapDispatchToProps = dispatch =>
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(CounterPanel);
+)(CounterDashboard);

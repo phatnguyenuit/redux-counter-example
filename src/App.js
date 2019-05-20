@@ -1,6 +1,6 @@
 import "./App.css";
 
-import CounterPanel from "./components/CounterPanel";
+import CounterPanel from "./components/CounterDashboard";
 import { Provider } from "react-redux";
 import React from "react";
 import createStore from "./redux/createStore";
