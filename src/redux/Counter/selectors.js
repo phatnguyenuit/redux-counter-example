@@ -2,7 +2,7 @@ import {
   createSelector
 } from 'reselect'
 
-const counterSelector = (state, props) => state.counterReducer.counters[props.id];
+export const counterSelector = (state, props) => state.counterReducer.counters[props.id];
 export const countersSelector = (state) => state.counterReducer.counters;
 export const counterIDsSelector = (state) => state.counterReducer.counterIDs;
 

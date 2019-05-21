@@ -2,6 +2,10 @@
 
 ## This is a simple demo Counter with Redux and Unit Tests
 
+## Learning Resource
+
+- [Unit tests with Redux](https://redux.js.org/recipes/writing-tests)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

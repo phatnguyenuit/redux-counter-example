@@ -39,6 +39,9 @@
     ]
   },
   "devDependencies": {
+    "@types/jest": "^24.0.13",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.13.1",
     "gh-pages": "^2.0.1"
   }
 }
