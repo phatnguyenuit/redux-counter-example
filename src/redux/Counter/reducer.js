@@ -11,12 +11,12 @@ import uniqueId from 'lodash/uniqueId';
 
 /*
 counters: {
-    1: {
-      text: 'Hello',
+    <Counter ID>: {
+      text: 'Counter text',
       value: 0,
     }
   },
-  counterIDs: [1]
+  counterIDs: ['<Counter ID>', ...]
 */
 const createInitalState = () => ({
   counters: {},
@@ -38,6 +38,9 @@ const reducer = (state = createInitalState(), action) => {
         value,
         counterID
       } = payload;
+      if (counterIDs.indexOf(counterID) === -1) {
+        return state;
+      }
       const selectedCounter = counters[counterID];
       return {
         ...state,
@@ -55,7 +58,11 @@ const reducer = (state = createInitalState(), action) => {
         value,
         counterID
       } = payload;
+      if (counterIDs.indexOf(counterID) === -1) {
+        return state;
+      }
       const selectedCounter = counters[counterID];
+
       return {
         ...state,
         counters: {
@@ -72,6 +79,9 @@ const reducer = (state = createInitalState(), action) => {
         counterID,
         counterValues
       } = payload;
+      if (counterIDs.indexOf(counterID) === -1) {
+        return state;
+      }
       const selectedCounter = counters[counterID];
       return {
         ...state,
@@ -104,6 +114,9 @@ const reducer = (state = createInitalState(), action) => {
       const {
         counterID
       } = payload;
+      if (counterIDs.indexOf(counterID) === -1) {
+        return state;
+      }
       const newCounterIDs = counterIDs.filter(id => id !== counterID);
       const newCounters = newCounterIDs.reduce((prevCounters, id) =>
         Object.assign(prevCounters, {

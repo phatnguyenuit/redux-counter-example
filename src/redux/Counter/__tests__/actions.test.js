@@ -1,19 +1,7 @@
-import {
-  ADD,
-  DECREASE,
-  INCREASE,
-  REMOVE,
-  UPDATE
-} from '../constants';
-import {
-  add,
-  decrease,
-  increase,
-  remove,
-  update
-} from '../actions';
+import { ADD, DECREASE, INCREASE, REMOVE, UPDATE } from "../constants";
+import { add, decrease, increase, remove, update } from "../actions";
 
-const text = 'Counter 1';
+const text = "Counter 1";
 const value = 10;
 
 describe("Test Counter actions", () => {
@@ -23,27 +11,29 @@ describe("Test Counter actions", () => {
       payload: {
         counterValues: {
           text,
-          value,
+          value
         }
       }
-    }
-    expect(add({
-      text,
-      value
-    })).toEqual(expectedAction)
+    };
+    expect(
+      add({
+        text,
+        value
+      })
+    ).toEqual(expectedAction);
   });
   it("action REMOVE counter", () => {
-    const counterID = 'COUNTER_1';
+    const counterID = "COUNTER_1";
     const expectedAction = {
       type: REMOVE,
       payload: {
         counterID
       }
-    }
-    expect(remove(counterID)).toEqual(expectedAction)
-  })
+    };
+    expect(remove(counterID)).toEqual(expectedAction);
+  });
   it("action UPDATE counter", () => {
-    const counterID = 'COUNTER_1';
+    const counterID = "COUNTER_1";
     const expectedAction = {
       type: UPDATE,
       payload: {
@@ -53,33 +43,35 @@ describe("Test Counter actions", () => {
           value
         }
       }
-    }
-    expect(update(counterID, {
-      text,
-      value
-    })).toEqual(expectedAction)
-  })
+    };
+    expect(
+      update(counterID, {
+        text,
+        value
+      })
+    ).toEqual(expectedAction);
+  });
 
   it("action INCREASE counter", () => {
-    const counterID = 'COUNTER_1';
+    const counterID = "COUNTER_1";
     const expectedAction = {
       type: INCREASE,
       payload: {
         counterID,
-        value,
+        value
       }
-    }
-    expect(increase(counterID, value)).toEqual(expectedAction)
-  })
+    };
+    expect(increase(counterID, value)).toEqual(expectedAction);
+  });
   it("action DECREASE counter", () => {
-    const counterID = 'COUNTER_1';
+    const counterID = "COUNTER_1";
     const expectedAction = {
       type: DECREASE,
       payload: {
         counterID,
-        value,
+        value
       }
-    }
-    expect(decrease(counterID, value)).toEqual(expectedAction)
-  })
+    };
+    expect(decrease(counterID, value)).toEqual(expectedAction);
+  });
 });
