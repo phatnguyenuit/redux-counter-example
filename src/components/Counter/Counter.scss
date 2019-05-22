@@ -24,7 +24,7 @@
 
   .control {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     justify-content: space-around;
     margin: 0.5rem 0.2rem;
 

@@ -1,16 +1,17 @@
 import "./Counter.scss";
 
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 
 import EditableCounter from "../EditableCounter";
 
-class Counter extends Component {
+class Counter extends PureComponent {
   constructor(props) {
     super(props);
     this.state = {
       isEditing: false
     };
   }
+
   decrease = () => {
     const { id, onDecrease } = this.props;
     onDecrease(id);
