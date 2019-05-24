@@ -1,14 +1,14 @@
-import "./EditableCounter.scss";
+import './EditableCounter.scss';
 
-import React from "react";
-import classNames from "classnames";
+import React from 'react';
+import classNames from 'classnames';
 
 class EditableCounter extends React.Component {
   constructor(props) {
     super(props);
     const { text, value } = this.props;
     this.state = {
-      text: text || "",
+      text: text || '',
       value: value || 0
     };
   }
@@ -27,7 +27,7 @@ class EditableCounter extends React.Component {
     }
   };
 
-  changeInput = e => {
+  changeInput = (e) => {
     const { name, value } = e.target;
     this.setState({
       [name]: value
@@ -39,7 +39,7 @@ class EditableCounter extends React.Component {
     const { text, value } = this.state;
     const isNew = !!!id;
     return (
-      <div className="counter counter-editable">
+      <div className="counter counter-editable" data-testid="counter-editable">
         <div className="form-group">
           <label>Title</label>
           <input
@@ -47,6 +47,7 @@ class EditableCounter extends React.Component {
             id="counterText"
             value={text}
             onChange={this.changeInput}
+            data-testid="text"
           />
         </div>
         <div className="form-group">
@@ -56,19 +57,24 @@ class EditableCounter extends React.Component {
             type="number"
             value={value}
             onChange={this.changeInput}
+            data-testid="value"
           />
         </div>
         <div>
           <button
             onClick={this.submit}
-            className={classNames("button", {
-              "button-add": isNew,
-              "button-update": !isNew
+            className={classNames('button', {
+              'button-add': isNew,
+              'button-update': !isNew
             })}
           >
-            {isNew ? "Add" : "Save"}
+            {isNew ? 'Add' : 'Save'}
           </button>
-          <button className="button button-cancel" onClick={cancelFallback}>
+          <button
+            className="button button-cancel"
+            onClick={cancelFallback}
+            data-testid="button-cancel"
+          >
             Cancel
           </button>
         </div>

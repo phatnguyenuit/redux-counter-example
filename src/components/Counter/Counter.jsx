@@ -1,8 +1,8 @@
-import "./Counter.scss";
+import './Counter.scss';
 
-import React, { PureComponent } from "react";
+import React, { PureComponent } from 'react';
 
-import EditableCounter from "../EditableCounter";
+import EditableCounter from '../EditableCounter';
 
 class Counter extends PureComponent {
   constructor(props) {
@@ -30,7 +30,7 @@ class Counter extends PureComponent {
     this.toggleEditing();
   };
   toggleEditing = () => {
-    this.setState(prevState => ({
+    this.setState((prevState) => ({
       isEditing: !prevState.isEditing
     }));
   };
@@ -49,24 +49,42 @@ class Counter extends PureComponent {
       );
     }
     return (
-      <div className="counter">
+      <div className="counter" data-testid="counter">
         <div className="button-group button-group--right">
-          <button onClick={this.toggleEditing} className="button button-edit">
+          <button
+            onClick={this.toggleEditing}
+            className="button button-edit"
+            data-testid="button-edit"
+          >
             Edit
           </button>
-          <button onClick={this.delete} className="button button-delete">
+          <button
+            onClick={this.delete}
+            className="button button-delete"
+            data-testid="button-delete"
+          >
             Delete
           </button>
         </div>
-        <h1 className="title">{text}</h1>
+        <h1 className="title" data-testid="text">
+          {text}
+        </h1>
         <div className="control">
-          <button onClick={this.decrease} className="button button-decrease">
+          <button
+            onClick={this.decrease}
+            className="button button-decrease"
+            data-testid="button-decrease"
+          >
             -
           </button>
           <div className="value">
-            <span>{value}</span>
+            <span data-testid="value">{value}</span>
           </div>
-          <button onClick={this.increase} className="button button-increase">
+          <button
+            onClick={this.increase}
+            className="button button-increase"
+            data-testid="button-increase"
+          >
             +
           </button>
         </div>
