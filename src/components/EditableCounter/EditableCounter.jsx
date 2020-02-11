@@ -9,7 +9,7 @@ class EditableCounter extends React.Component {
     const { text, value } = this.props;
     this.state = {
       text: text || '',
-      value: value || 0
+      value: value || 0,
     };
   }
   submit = () => {
@@ -18,7 +18,7 @@ class EditableCounter extends React.Component {
     if (!text) return;
     const counterValues = {
       text,
-      value: parseInt(value)
+      value: parseInt(value),
     };
     if (!!id) {
       onEdit(id, counterValues);
@@ -30,7 +30,7 @@ class EditableCounter extends React.Component {
   changeInput = (e) => {
     const { name, value } = e.target;
     this.setState({
-      [name]: value
+      [name]: value,
     });
   };
 
@@ -64,14 +64,14 @@ class EditableCounter extends React.Component {
           <button
             onClick={this.submit}
             className={classNames('button', {
-              'button-add': isNew,
-              'button-update': !isNew
+              button__add: isNew,
+              button__update: !isNew,
             })}
           >
             {isNew ? 'Add' : 'Save'}
           </button>
           <button
-            className="button button-cancel"
+            className="button button__cancel"
             onClick={cancelFallback}
             data-testid="button-cancel"
           >

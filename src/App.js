@@ -1,10 +1,10 @@
-import "./App.css";
+import './App.css';
 
-import CounterPanel from "./components/CounterDashboard";
-import { Provider } from "react-redux";
-import React from "react";
-import createStore from "./redux/createStore";
-import logo from "./logo.svg";
+import CounterPanel from './components/CounterDashboard';
+import { Provider } from 'react-redux';
+import React from 'react';
+import createStore from './redux/createStore';
+import logo from './logo.svg';
 
 const store = createStore();
 
@@ -13,7 +13,7 @@ const App = () => {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
+        <p className="App-title">
           Simple <code>Counter</code> demo and unit tests
         </p>
         <a
@@ -25,7 +25,9 @@ const App = () => {
           Checkout source code
         </a>
       </header>
-      <CounterPanel />
+      <main className="App-content">
+        <CounterPanel />
+      </main>
     </div>
   );
 };

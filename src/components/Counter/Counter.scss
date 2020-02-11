@@ -1,6 +1,6 @@
 .counter {
   margin: 0 auto .5em;
-  width: 30%;
+  width: calc(30% + 20vmin);
   font-size: calc(14px + 2vmin);
   border: 1px solid rgb(10, 20, 100);
   background-color: bisque;

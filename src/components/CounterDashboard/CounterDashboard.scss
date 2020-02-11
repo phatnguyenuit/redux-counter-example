@@ -8,12 +8,14 @@
     padding: 0.5em;
     width: 30%;
     border-radius: 1rem;
-    border-color: white;
+    border: 1px solid #ffffff;
     color: white;
     outline: none;
     text-align: center;
 
     &-add {
+      margin-top: 16px;
+      margin-bottom: 24px;
       background-color: yellowgreen;
     }
   }
