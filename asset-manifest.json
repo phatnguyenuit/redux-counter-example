@@ -1,16 +1,23 @@
 {
   "files": {
-    "main.css": "/redux-counter-example/static/css/main.31000737.chunk.css",
-    "main.js": "/redux-counter-example/static/js/main.02bac6a6.chunk.js",
-    "main.js.map": "/redux-counter-example/static/js/main.02bac6a6.chunk.js.map",
-    "runtime~main.js": "/redux-counter-example/static/js/runtime~main.7372a5d8.js",
-    "runtime~main.js.map": "/redux-counter-example/static/js/runtime~main.7372a5d8.js.map",
-    "static/js/2.b46feade.chunk.js": "/redux-counter-example/static/js/2.b46feade.chunk.js",
-    "static/js/2.b46feade.chunk.js.map": "/redux-counter-example/static/js/2.b46feade.chunk.js.map",
+    "main.css": "/redux-counter-example/static/css/main.13b6176a.chunk.css",
+    "main.js": "/redux-counter-example/static/js/main.56020914.chunk.js",
+    "main.js.map": "/redux-counter-example/static/js/main.56020914.chunk.js.map",
+    "runtime-main.js": "/redux-counter-example/static/js/runtime-main.33d682df.js",
+    "runtime-main.js.map": "/redux-counter-example/static/js/runtime-main.33d682df.js.map",
+    "static/js/2.ac59f100.chunk.js": "/redux-counter-example/static/js/2.ac59f100.chunk.js",
+    "static/js/2.ac59f100.chunk.js.map": "/redux-counter-example/static/js/2.ac59f100.chunk.js.map",
     "index.html": "/redux-counter-example/index.html",
-    "precache-manifest.812523a75fda47f20bed13d821990b2c.js": "/redux-counter-example/precache-manifest.812523a75fda47f20bed13d821990b2c.js",
+    "precache-manifest.a9ca35f631d2b68d7f187ef6d489a79c.js": "/redux-counter-example/precache-manifest.a9ca35f631d2b68d7f187ef6d489a79c.js",
     "service-worker.js": "/redux-counter-example/service-worker.js",
-    "static/css/main.31000737.chunk.css.map": "/redux-counter-example/static/css/main.31000737.chunk.css.map",
+    "static/css/main.13b6176a.chunk.css.map": "/redux-counter-example/static/css/main.13b6176a.chunk.css.map",
+    "static/js/2.ac59f100.chunk.js.LICENSE.txt": "/redux-counter-example/static/js/2.ac59f100.chunk.js.LICENSE.txt",
     "static/media/logo.svg": "/redux-counter-example/static/media/logo.5d5d9eef.svg"
-  }
+  },
+  "entrypoints": [
+    "static/js/runtime-main.33d682df.js",
+    "static/js/2.ac59f100.chunk.js",
+    "static/css/main.13b6176a.chunk.css",
+    "static/js/main.56020914.chunk.js"
+  ]
 }
