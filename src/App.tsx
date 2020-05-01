@@ -1,10 +1,13 @@
-import './App.css';
+import React from 'react';
+import { Provider } from 'react-redux';
+import GitHubCorner from 'react-github-corner';
+
+import createStore from './redux/createStore';
 
 import CounterPanel from './components/CounterDashboard';
-import { Provider } from 'react-redux';
-import React from 'react';
-import createStore from './redux/createStore';
 import logo from './logo.svg';
+
+import './App.css';
 
 const store = createStore();
 
@@ -16,11 +19,7 @@ const App = () => {
         <p className="App-title">
           Simple <code>Counter</code> demo and unit tests
         </p>
-        <a
-          className="App-link"
-          href="https://github.com/phatnguyenuit/redux-counter-example">
-          Checkout source code
-        </a>
+        <GitHubCorner href="https://github.com/phatnguyenuit/redux-counter-example" />
       </header>
       <main className="App-content">
         <CounterPanel />
