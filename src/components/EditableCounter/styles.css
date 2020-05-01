@@ -1,0 +1,35 @@
+.form-group {
+  margin: 1rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.form-group input {
+  padding: 4px 8px;
+  font-size: calc(14px + 2vmin);
+  width: 100%;
+  flex-shrink: 2;
+}
+
+.button {
+  display: inline-block;
+  font-size: calc(14px + 2vmin);
+  padding: 0.1em;
+  width: 100%;
+  max-width: 200px;
+  text-align: center;
+  margin: 0 0.5rem 0.5rem;
+}
+
+.button__add {
+  background-color: yellowgreen;
+}
+
+.button__update {
+  background-color: #007bff;
+}
+
+.button__cancel {
+  background-color: red;
+}

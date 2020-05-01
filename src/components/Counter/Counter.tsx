@@ -1,14 +1,13 @@
-import './Counter.scss';
-
 import React, { PureComponent } from 'react';
 
 import EditableCounter from '../EditableCounter';
+import './styles.css';
 
-class Counter extends PureComponent {
-  constructor(props) {
+class Counter extends PureComponent<CounterProps, CounterState> {
+  constructor(props: CounterProps) {
     super(props);
     this.state = {
-      isEditing: false
+      isEditing: false,
     };
   }
 
@@ -24,14 +23,14 @@ class Counter extends PureComponent {
     const { id, onDelete } = this.props;
     onDelete(id);
   };
-  update = (id, values) => {
+  update = (id: number, values: CounterValues) => {
     const { onUpdate } = this.props;
     onUpdate(id, values);
     this.toggleEditing();
   };
   toggleEditing = () => {
-    this.setState((prevState) => ({
-      isEditing: !prevState.isEditing
+    this.setState(prevState => ({
+      isEditing: !prevState.isEditing,
     }));
   };
   render() {
@@ -54,15 +53,13 @@ class Counter extends PureComponent {
           <button
             onClick={this.toggleEditing}
             className="button button-edit"
-            data-testid="button-edit"
-          >
+            data-testid="button-edit">
             Edit
           </button>
           <button
             onClick={this.delete}
             className="button button-delete"
-            data-testid="button-delete"
-          >
+            data-testid="button-delete">
             Delete
           </button>
         </div>
@@ -73,8 +70,7 @@ class Counter extends PureComponent {
           <button
             onClick={this.decrease}
             className="button button-decrease"
-            data-testid="button-decrease"
-          >
+            data-testid="button-decrease">
             -
           </button>
           <div className="value">
@@ -83,8 +79,7 @@ class Counter extends PureComponent {
           <button
             onClick={this.increase}
             className="button button-increase"
-            data-testid="button-increase"
-          >
+            data-testid="button-increase">
             +
           </button>
         </div>
@@ -94,3 +89,20 @@ class Counter extends PureComponent {
 }
 
 export default Counter;
+
+export type CounterValues = {
+  text: string;
+  value: number;
+};
+
+export interface CounterProps extends CounterValues {
+  id: number;
+  onIncrease: (id: number) => void;
+  onDecrease: (id: number) => void;
+  onDelete: (id: number) => void;
+  onUpdate: (id: number, values: CounterValues) => void;
+}
+
+export interface CounterState {
+  isEditing: boolean;
+}

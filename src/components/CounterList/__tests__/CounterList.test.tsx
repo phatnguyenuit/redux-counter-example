@@ -1,6 +1,5 @@
-import 'jest-dom/extend-expect';
-
-import { cleanup, fireEvent, render } from 'react-testing-library';
+import '@testing-library/jest-dom/extend-expect';
+import { cleanup, fireEvent, render } from '@testing-library/react';
 
 import CounterList from '..';
 import { Provider } from 'react-redux';
@@ -12,12 +11,12 @@ import createStore from '../../../redux/createStore';
 const store = createStore({
   counterReducer: {
     counters: {
-      COUNTER_1: {
+      1: {
         text: 'Counter 1',
         value: 0
       }
     },
-    counterIDs: ['COUNTER_1']
+    counterIDs: ['1']
   }
 });
 

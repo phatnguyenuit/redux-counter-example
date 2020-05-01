@@ -1,0 +1,4 @@
+**/*.test.ts
+**/*.test.tsx
+**/*.d.ts
+src/serviceWorker.ts

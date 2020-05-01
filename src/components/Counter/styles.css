@@ -1,0 +1,46 @@
+.counter {
+  margin: 0 auto 0.5em;
+  width: calc(30% + 20vmin);
+  font-size: calc(14px + 2vmin);
+  border: 1px solid #0a1464;
+  background-color: bisque;
+  border-radius: 1rem;
+}
+.counter .title {
+  color: #b22271;
+}
+.counter .button-group {
+  margin: 0.5rem 1.5rem;
+}
+.counter .button-group--right {
+  float: right;
+}
+.counter .button-group::before, .button-group::after {
+  clear: both;
+}
+.counter .control {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  margin: 0.5rem 0.2rem;
+}
+.counter .control .value {
+  width: 30%;
+}
+.counter .button {
+  display: inline-block;
+  font-size: calc(14px + 2vmin);
+  width: 100%;
+  max-width: 200px;
+  text-align: center;
+  color: white;
+  border-radius: 0.5em;
+  outline: none;
+  margin: 0 0.5rem 0.5rem;
+}
+.counter .button-delete, .counter .button-decrease {
+  background-color: red;
+}
+.counter .button-edit, .counter .button-increase {
+  background-color: yellowgreen;
+}

@@ -1,0 +1,36 @@
+{
+	"Create React Functional Component": {
+		"prefix": "crfc",
+		"body": [
+			"import React, { memo } from 'react';",
+			"",
+			"export const ${1:ComponentName}Component: React.FC = () => <div>Empty</div>;",
+			"",
+			"const $1 = memo(${1:ComponentName}Component);",
+			"$1.displayName = '$1';",
+			"",
+			"export default $1;",
+			""
+		],
+		"description": "Create React Functional Component"
+	},
+	"Create NextJS Page": {
+		"prefix": "cnp",
+		"body": [
+			"import { NextPage } from 'next';",
+			"",
+			"const ${1:PageName}Page: NextPage = () => {",
+			"  return (",
+			"    <div>",
+			"      <p>$1Page</p>",
+			"    </div>",
+			"  );",
+			"};",
+			"",
+			"$1Page.displayName = '$1';",
+			"export default $1Page;",
+			""
+		],
+		"description": "Create NextJS Page"
+	}
+}

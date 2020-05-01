@@ -1,13 +1,8 @@
-import {
-  decrease,
-  increase,
-  remove,
-  update
-} from "../../redux/Counter/actions";
+import { decrease, increase, remove, update } from 'redux/Counter/actions';
 
-import Counter from "./Counter";
-import { bindActionCreators } from "redux";
-import { connect } from "react-redux";
+import Counter from './Counter';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
 
 const mapDispatchToProps = dispatch =>
   bindActionCreators(
@@ -15,12 +10,9 @@ const mapDispatchToProps = dispatch =>
       onIncrease: increase,
       onDecrease: decrease,
       onUpdate: update,
-      onDelete: remove
+      onDelete: remove,
     },
-    dispatch
+    dispatch,
   );
 
-export default connect(
-  null,
-  mapDispatchToProps
-)(Counter);
+export default connect(null, mapDispatchToProps)(Counter);

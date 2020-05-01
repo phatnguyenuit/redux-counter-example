@@ -1,20 +1,25 @@
-import 'jest-dom/extend-expect';
-
-import { cleanup, fireEvent, render } from 'react-testing-library';
+import '@testing-library/jest-dom/extend-expect';
+import { cleanup, fireEvent, render } from '@testing-library/react';
 
 import Counter from '../Counter';
 import React from 'react';
+import { CounterProps } from '../Counter';
 
 afterEach(cleanup);
 
 describe('Test Counter', () => {
   const props = {
-    id: 'COUNTER_1',
+    id: 1,
     text: 'Counter 1',
-    value: 0
-  };
+    value: 0,
+    onIncrease: jest.fn(),
+    onDecrease: jest.fn(),
+    onDelete: jest.fn(),
+    onUpdate: jest.fn()
+  } as CounterProps;
   const newProps = {
-    id: 'COUNTER_10',
+    ...props,
+    id: 10,
     text: 'Counter 10',
     value: 10
   };

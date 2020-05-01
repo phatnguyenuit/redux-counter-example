@@ -1,0 +1,22 @@
+.counterPanel {
+  margin: 0.5em auto;
+  font-size: calc(12px + 2vmin);
+}
+.counterPanel .button {
+  display: inline-block;
+  font-size: calc(10px + 2vmin);
+  padding: 0.5em;
+  width: 100%;
+  max-width: 200px;
+  border-radius: 1rem;
+  border: 1px solid #fff;
+  color: white;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+}
+.counterPanel .button-add {
+  margin-top: 16px;
+  margin-bottom: 24px;
+  background-color: yellowgreen;
+}

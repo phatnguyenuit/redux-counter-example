@@ -18,10 +18,7 @@ const App = () => {
         </p>
         <a
           className="App-link"
-          href="https://github.com/phatnguyenuit/redux-counter-example"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+          href="https://github.com/phatnguyenuit/redux-counter-example">
           Checkout source code
         </a>
       </header>
