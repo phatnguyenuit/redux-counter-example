@@ -57,12 +57,10 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
-      "yarn lint:fix",
-      "git add"
+      "yarn lint:fix"
     ],
     "{*.{json,md}}": [
-      "prettier --write",
-      "git add"
+      "prettier --write"
     ]
   },
   "browserslist": {
